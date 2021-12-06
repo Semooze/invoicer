@@ -13,7 +13,7 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, feature/DAST ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
@@ -68,7 +68,7 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-      
+
   zap_scan:
     runs-on: ubuntu-latest
     name: Scan the webapplication
